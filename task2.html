@@ -22,11 +22,11 @@
       function changeTitle() {
         let theText = input.value;
         try {
-          document.getElementById("title").innerHTML = theText;
           if (theText === "") throw new Error("no input");
+          document.getElementById("title").innerHTML = theText;
         } catch (err) {
           console.log(err);
-          document.getElementById("title").innerHTML = "You didn't change me";
+          //document.getElementById("title").innerHTML = "You didn't change me";
           alert("NO INPUT!");
           return;
         }
