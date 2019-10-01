@@ -10,12 +10,27 @@
       <button onclick="changeTitle()">Press Me</button>
     </div>
     <script>
+      function changeTitle() {
+        try {
+          if (!text.value) {
+            throw new Error("Sorry please enter something");
+          }
+          var heading = document.getElementById("title");
+          var text = document.getElementById("inputText").value;
+          heading.innerText = text;
+        } catch (Ex) {
+          alert(Ex);
+        }
+      }
+
       /*
           Implement the following functionality:
-            - When a user presses the button, the text in the h1 tag should change to reflect what the user has entered in the input field
+            - When a user presses the button, the text in the h1 tag should change to reflect
+              what the user has entered in the input field
             - If the input field is empty, this change shouldn't happen
             - Use the onclick attribute to achieve this
-            - Bonus points for a warning message (however you like) for an empty input field attempt
+            - Bonus points for a warning message (however you like)
+              for an empty input field attempt
        */
     </script>
   </body>
