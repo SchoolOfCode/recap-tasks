@@ -5,6 +5,25 @@
   </head>
   <body>
     <script>
+      contentDiv = document.createElement("div");
+      contentDiv.setAttribute("id", "content");
+      document.body.appendChild(contentDiv);
+
+      SOC = document.createTextNode("School of Code");
+
+      heading = document.createElement("h1");
+      contentDiv.appendChild(heading);
+      heading.appendChild(SOC);
+
+      img = document.createElement("img");
+      img.setAttribute(
+        "src",
+        "https://images.pexels.com/photos/5149/easter-eggs.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      );
+      img.setAttribute("width", "500");
+      img.setAttribute("height", "300");
+      document.body.appendChild(img);
+
       /* Using purely JavaScript:
        1. create a div with an id of 'content'
        2. create a h1 tag with the text `School of Code`
