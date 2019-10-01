@@ -11,12 +11,26 @@
     </div>
     <script>
       /*
-          Implement the following functionality:
-            - When a user presses the button, the text in the h1 tag should change to reflect what the user has entered in the input field
-            - If the input field is empty, this change shouldn't happen
-            - Use the onclick attribute to achieve this
-            - Bonus points for a warning message (however you like) for an empty input field attempt
-       */
+              Implement the following functionality:
+                - When a user presses the button, the text in the h1 tag should change to reflect what the user has entered in the input field
+                - If the input field is empty, this change shouldn't happen
+                - Use the onclick attribute to achieve this
+                - Bonus points for a warning message (however you like) for an empty input field attempt
+           */
+      var input = document.getElementById("inputText");
+
+      function changeTitle() {
+        let theText = input.value;
+        try {
+          document.getElementById("title").innerHTML = theText;
+          if (theText === "") throw new Error("no input");
+        } catch (err) {
+          console.log(err);
+          document.getElementById("title").innerHTML = "You didn't change me";
+          alert("NO INPUT!");
+          return;
+        }
+      }
     </script>
   </body>
 </html>

@@ -6,11 +6,25 @@
   <body>
     <script>
       /* Using purely JavaScript:
-       1. create a div with an id of 'content'
-       2. create a h1 tag with the text `School of Code`
-         a. this is a child of the #content div
-       3. create an image, and make the source 'https://images.pexels.com/photos/5149/easter-eggs.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-    */
+         1. create a div with an id of 'content'
+         2. create a h1 tag with the text `School of Code`
+           a. this is a child of the #content div
+         3. create an image, and make the source 'https://images.pexels.com/photos/5149/easter-eggs.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+      */
+      var content = document.createElement("DIV");
+      content.setAttribute("id", "content");
+      document.body.appendChild(content);
+
+      var heading = document.createElement("h1");
+      document.getElementById("content").appendChild(heading);
+      heading.innerHTML = "School of Code";
+
+      var image = document.createElement("IMG");
+      image.setAttribute(
+        "src",
+        "https://images.pexels.com/photos/5149/easter-eggs.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      );
+      document.getElementById("content").appendChild(image);
     </script>
   </body>
 </html>
