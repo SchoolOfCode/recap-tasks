@@ -10,13 +10,17 @@
       <button onclick="changeTitle()">Press Me</button>
     </div>
     <script>
-      /*
-          Implement the following functionality:
-            - When a user presses the button, the text in the h1 tag should change to reflect what the user has entered in the input field
-            - If the input field is empty, this change shouldn't happen
-            - Use the onclick attribute to achieve this
-            - Bonus points for a warning message (however you like) for an empty input field attempt
-       */
+      function changeTitle() {
+        var input = document.getElementById("inputText");
+        console.log(input.value);
+        if (input.value == "") {
+          window.confirm("Error. No value entered");
+          return;
+        }
+        var heading = document.getElementById("title");
+        title.innerText = input.value;
+        console.log(title.innerText);
+      }
     </script>
   </body>
 </html>
