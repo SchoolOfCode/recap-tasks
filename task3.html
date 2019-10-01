@@ -4,49 +4,30 @@
     <title>Task 3</title>
   </head>
   <body>
-    <!-- Challenge 1 -->
-    <div id="root">
-      <h1 id="title">Change Me</h1>
-      <input id="inputText" />
-      <button onclick="changeTitle()">Press Me</button>
-    </div>
+    <input /><button>Add to list</button>
+    <ul></ul>
+    <button>Sort</button>
+    <input /><button>Search</button>
+    <button>Count the words containing a vowel</button><span>0</span>
     <script>
-      const changeTitle = () => {
-        const title = document.getElementById("title");
-        const input = document.getElementById("inputText");
-        if (input.value === "") {
-          const errorDiv = document.createElement("p");
-          const errorMessage = document.createTextNode('"ooops! no text!"');
-          errorDiv.appendChild(errorMessage);
-          const root = document.getElementById("root");
-          return root.appendChild(errorDiv);
-        }
-        title.innerHTML = input.value;
-      };
-
+      let list = [
+        "apple",
+        "banana",
+        "clementine",
+        "date",
+        "eggplant",
+        "fennel",
+        "grapes",
+        "horseradish"
+      ];
       /*
-          Implement the following functionality
-            When a user presses the button, the text in the h1 tag should change to reflect what the user has entered in the input field
-            If the input field is empty, this change shouldn't happen
-            Use the onclick attribute to achieve this
-            Bonus points for a warning message (however you like) for an empty input field attempt
-       */
+      1. First, link the "Add to list" button to functionality so that any user input can be added to the list
+      2. Show the list in the ul tag as separate items
+      3. On pressing the Sort button, the list should sort and refresh the view
+      4. On pressing search, the phrase entered in the input field should be used to filter the list, leaving only matching items
+        4a. Bonus points if you can make this not a complete match (i.e. typing 'ap' will leave 'apple')
+      5. Pressing the "count..." button should show the number of words that contain a vowel
+     */
     </script>
-    <!-- Challenge 2
-    <div>
-      <ul>
-      </ul>
-      <input />
-      <button>Add Me</button>
-    </div>
-    <script>
-      /*
-          Implement the following functionality
-            When a user presses the button, the list should have an item added containing what the user has entered in the input field
-            If the input field is empty, this change shouldn't happen
-            Add an event listener to achieve this
-            Bonus points for a warning message (however you like) for an empty input field attempt (in a different way to above)
-       */
-    </script> -->
   </body>
 </html>
