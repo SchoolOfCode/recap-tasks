@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 3</title>
+  </head>
+  <body>
+    <!-- Challenge 1 -->
+    <div id="root">
+      <h1 id="title">Change Me</h1>
+      <input id="inputText" />
+      <button onclick="changeTitle()">Press Me</button>
+    </div>
+    <script>
+      const changeTitle = () => {
+        const title = document.getElementById("title");
+        const input = document.getElementById("inputText");
+        if (input.value === "") {
+          const errorDiv = document.createElement("p");
+          const errorMessage = document.createTextNode('"ooops! no text!"');
+          errorDiv.appendChild(errorMessage);
+          const root = document.getElementById("root");
+          return root.appendChild(errorDiv);
+        }
+        title.innerHTML = input.value;
+      };
+
+      /*
+          Implement the following functionality
+            When a user presses the button, the text in the h1 tag should change to reflect what the user has entered in the input field
+            If the input field is empty, this change shouldn't happen
+            Use the onclick attribute to achieve this
+            Bonus points for a warning message (however you like) for an empty input field attempt
+       */
+    </script>
+    <!-- Challenge 2
+    <div>
+      <ul>
+      </ul>
+      <input />
+      <button>Add Me</button>
+    </div>
+    <script>
+      /*
+          Implement the following functionality
+            When a user presses the button, the list should have an item added containing what the user has entered in the input field
+            If the input field is empty, this change shouldn't happen
+            Add an event listener to achieve this
+            Bonus points for a warning message (however you like) for an empty input field attempt (in a different way to above)
+       */
+    </script> -->
+  </body>
+</html>
